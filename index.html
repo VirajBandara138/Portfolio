@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>My Photography Portfolio</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,300&family=MuseoModerno:wght@100&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Grandstander&family=Kanit:ital,wght@0,500;0,700;1,300&family=MuseoModerno:wght@100&family=Rokkitt:wght@600&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <link rel="stylesheet" type="text/css" href="css/gallery1.css">
+      <link rel="stylesheet" type="text/css" href="css/contact.css">
+      <link rel="stylesheet" type="text/css" href="css/bookform.css">
+      <link rel="stylesheet" type="text/css" href="css/slider.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      
+      
+   </head>
+   <body>
+      <header>
+         <div class="logo">
+            <img src="image/5.jpg" alt="Photography Logo"><br>
+         </div>
+         <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact Us</a>
+            <a href="#bknow">Book Now</a>
+            <a href="#gallery">Gallery</a>
+         </nav>
+      </header>
+      <main >
+         <article>
+            <h1>This is a sample article</h1>
+            <p>This is a sample article.</p>
+         </article>
+         <section id="home">
+            <h1>Welcome to My Photography Portfolio</h1>
+            <p>Here you can explore my collection of stunning photographs showcasing various landscapes and subjects. Take a moment to browse through the different galleries and enjoy the artistry of photography.</p>
+            <p>Welcome to my photography portfolio website. Explore my stunning collection of photographs capturing beautiful landscapes and captivating moments.</p>
+            <div class="slider">
+               <img src="image/5.jpg" alt="Image 2">
+               <img src="image/8.jpg" alt="Image 2">
+               <img src="image/9.jpg" alt="Image 3">
+               <img src="image/10.jpg" alt="Image 4">
+            </div>
+         </section>
+         <section id="about">
+            <h2>About</h2>
+            <p>Learn more about me and my passion for photography. Discover the stories behind my images and the techniques I use to create captivating photographs.</p>
+            <div class="gallery">
+               <div class="gallery-item">
+                  <img src="image/7.jpg" alt="Image 1">
+                  <div class="overlay">
+                  </div>
+               </div>
+               <div class="gallery-item">
+                  <img src="image/8.jpg" alt="Image 2">
+                  <div class="overlay">
+                  </div>
+               </div>
+               <div class="gallery-item">
+                  <img src="image/9.jpg" alt="Image 1">
+                  <div class="overlay">
+                  </div>
+               </div>
+               <div class="gallery-item">
+                  <img src="image/10.jpg" alt="Image 1">
+                  <div class="overlay">
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section id="portfolio">
+            <h2>Portfolio</h2>
+            <p>View my extensive portfolio showcasing a wide range of subjects and styles. From nature and wildlife to portraits and architecture, you'll find a diverse collection of my best work.</p>
+            <div class="photo-gallery">
+               <img src="image/2.jpg" alt="Photograph 1">
+            </div>
+         </section>
+         <section id="services">
+            <h2>Services</h2>
+            <p>View my extensive portfolio showcasing a wide range of subjects and styles. From nature and wildlife to portraits and architecture, you'll find a diverse collection of my best work.</p>
+         </section>
+         <section id="contact">
+            <h2>contact us</h2>
+            <form name="contactForm" onsubmit="return validateForm()">
+               <label for="name">Name:</label>
+               <input type="text" id="name" name="name" ><br><br>
+               <label for="email">Email:</label>
+               <input type="email" id="email" name="email" ><br><br>
+               <label for="phone">Phone:</label>
+               <input type="text" id="phone" name="phone"><br><br>
+               <label for="address">Address:</label>
+               <textarea name="address" id="address" ></textarea><br><br>
+               <label for="event">Event</label>
+               <div class="event">
+                  <input type="radio" name="event" id="wedding" value="Wedding">
+                  <label for="wedding">Wedding</label>
+                  <input type="radio" name="event" id="bd" value="Birthday">
+                  <label for="bd">Birthday</label>
+                  <input type="radio" name="event" id="other" value="Other">
+                  <label for="other">Other</label>
+               </div><br><br>
+               <label for="date">Date</label>
+               <input type="date" name="date" id="date"><br><br>
+               <label for="more">More</label>
+               <textarea name="more" id="more"></textarea><br><br>
+               
+               <button id="contact_btn" type="submit" value="Submit">Submit</button>
+
+            </form>
+         </section>
+         
+         <section id="gallery">
+            <h2>Our Gallery</h2>
+            <p>Here is photos gallery of my works.</p>
+            <button id="toggleButton">View Gallery</button>
+            <!-- Additional information to be toggled -->
+            <div id="additionalInfo" style="display: none;">
+               <div class="categories">
+                  <button class="category-btn active" data-category="all">All</button>
+                  <button class="category-btn" data-category="wedding">Wedding Album</button>
+                  <button class="category-btn" data-category="family">Family Album</button>
+                  <button class="category-btn" data-category="event">Event Album</button>
+               </div>
+               <div class="photos">
+                  <div class="photo wedding">
+                     <img src="image/about/1.jpg" alt="Wedding Photo 1">
+                  </div>
+                  <div class="photo family">
+                     <img src="image//baby/1.jpg" alt="Family Photo 1">
+                  </div>
+                  <div class="photo event">
+                     <img src="image/event/1.jpg" alt="Event Photo 1">
+                  </div>
+                  <div class="photo wedding">
+                     <img src="image/about/3.jpg" alt="Wedding Photo 2">
+                  </div>
+                  <div class="photo family">
+                     <img src="image/baby/2.jpg" alt="Family Photo 2">
+                  </div>
+                  <div class="photo event">
+                     <img src="image/event/2.jpg" alt="Event Photo 2">
+                  </div>
+               </div>
+            </div>
+         </section>
+      </main>
+      <footer >
+         <h3>Contact Details</h3>
+         <p>Address: No.5,Maththegoda,Maharagama,SriLanka</p>
+         <p>Phone: +94 113 678 456</p>
+         <p>Email: rvaphotography@gmail.com</p>
+         <p>Website: www.rvaphotography.com</p>
+         <ul>
+            <li><a href="#" class="fa fa-facebook"></a>
+            <li><a href="#" class="fa fa-twitter"></a></li>
+            <li><a href="#" class="fa fa-google"></a></li>
+            <li><a href="#" class="fa fa-linkedin"></a></li>
+            <li><a href="#" class="fa fa-youtube"></a></li>
+            </li>
+         </ul>
+      </footer>
+      <div class="fallen-leaves" aria-hidden="true">
+         <div class="fallen-leaf">
+            🍂
+         </div>
+         <div class="fallen-leaf">
+            🍂
+         </div>
+         <div class="fallen-leaf">
+            🍂
+         </div>
+         <!-- Add more fallen leaves here -->
+      </div>
+      <script src="js/leafflake.js"></script>
+      <script type="text/javascript" src="js/category.js"></script>
+      <script type="text/javascript" src="js/slider.js"></script>
+      <!-- <script type="text/javascript" src="js/contact.js"></script> -->
+      <script type="text/javascript">
+         // Get the toggle button element
+         const toggleButton = document.getElementById('toggleButton');
+         
+         // Get the additional information element
+         const additionalInfo = document.getElementById('additionalInfo');
+         
+         // Add a click event listener to the toggle button
+         toggleButton.addEventListener('click', function() {
+           // Toggle the visibility of the additional information
+           if (additionalInfo.style.display === 'none') {
+             additionalInfo.style.display = 'block';
+           } else {
+             additionalInfo.style.display = 'none';
+           }
+         });
+      </script>
+      <script type="text/javascript">//smooth scrolling
+         $(document).ready(function(){
+          // Add smooth scrolling to all links
+          $("a").on('click', function(event) {
+         
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+              // Prevent default anchor click behavior
+              event.preventDefault();
+         
+              // Store hash
+              var hash = this.hash;
+         
+              // Using jQuery's animate() method to add smooth page scroll
+              // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+              $('html, body').animate({
+                scrollTop: $(hash).offset().top
+              }, 800, function(){
+           
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              });
+            } // End if
+          });
+         });
+      </script>
+      <script type="text/javascript">
+         // document.addEventListener("DOMContentLoaded", function(){
+         function validateForm() {
+          // Get form inputs
+          var name = document.forms["contactForm"]["name"].value;
+          var email = document.forms["contactForm"]["email"].value;
+          var phone = document.forms["contactForm"]["phone"].value;
+         
+          // Validate name (required field)
+          if (name == "") {
+            alert("Name must be filled out");
+            return false;
+          }
+         
+          // Validate email (required and correct format)
+          var emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+          if (email == "") {
+            alert("Email must be filled out");
+            return false;
+          } else if (!emailRegex.test(email)) {
+            alert("Invalid email format");
+            return false;
+          }
+         
+          // Validate phone number (optional and correct format)
+          var phoneRegex = /^\d{10}$/;
+          if (phone != "" && !phoneRegex.test(phone)) {
+            alert("Invalid phone number format");
+            return false;
+          }
+         }
+         // }
+         
+         
+      </script>
+   </body>
+</html>
